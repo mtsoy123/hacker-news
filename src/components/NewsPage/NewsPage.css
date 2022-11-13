@@ -1,0 +1,50 @@
+.newsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  max-width: 904px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px;
+  gap: 20px;
+
+  box-sizing: border-box;
+}
+
+.newsPage__navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.newsPage__header {
+  font-family: 'Avenir', serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #F26522;
+
+  margin: 0;
+}
+
+.newsPage__button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+
+  font-family: 'Avenir', serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #F26522;
+
+}
+

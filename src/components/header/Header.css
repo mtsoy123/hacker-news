@@ -1,0 +1,38 @@
+.header {
+  background: #FFD399;
+  display: flex;
+  justify-content: center;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  width: 100%;
+  max-width: 840px;
+  padding: 0 32px 0 32px;
+}
+
+.header__logo {
+  width: 32px;
+  height: 32px;
+}
+
+.header__text {
+  font-family: 'Avenir', serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: #000000;
+
+  margin-left: 12px;
+}
+
+@media only screen and (max-width: 840px) {
+  .header__container {
+    padding: 0 20px;
+  }
+}
