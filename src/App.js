@@ -4,24 +4,28 @@ import Feed from './components/feed/Feed';
 import NewsPage from './components/NewsPage/NewsPage';
 import {useEffect} from 'react';
 import {api} from './utils/Api';
+import {Route} from 'react-router-dom';
 
 function App() {
 
   useEffect(() => {
-  api.getLatestNews(100)
-    .then(res => console.log(res,' qqqqqq'))
-  },[])
+    api.getLatestNews(100)
+    .then(res => console.log(res, ' qqqqqq'))
+  }, [])
 
   return (
     <div className="App">
       <Header/>
-      <Feed>
+      <Route exact path="/">
+        <Feed>
 
-      </Feed>
+        </Feed>
+      </Route>
+      <Route path="/news/:id">
+        <NewsPage>
 
-      <NewsPage>
-
-      </NewsPage>
+        </NewsPage>
+      </Route>
     </div>
   );
 }
