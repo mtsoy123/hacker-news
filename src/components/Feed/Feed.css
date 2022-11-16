@@ -1,15 +1,11 @@
 .feed {
   display: flex;
   flex-direction: column;
-  /*justify-content: center;*/
-  /*align-items: center;*/
   width: 100%;
   max-width: 904px;
   margin: 0 auto;
   padding: 32px;
-
   gap: 20px;
-
   box-sizing: border-box;
 }
 
@@ -19,13 +15,11 @@
   font-weight: 800;
   font-size: 16px;
   line-height: 22px;
-  color: #1F1F1F;
-
+  color: #1f1f1f;
   display: flex;
   gap: 8px;
-
   margin: 0;
-
+  padding: 0;
   width: 100%;
 }
 
@@ -39,7 +33,11 @@
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
 
+.feed__button:hover {
+  opacity: 70%;
+  transition: opacity .3s ease-out;
 }
 
 @media only screen and (max-width: 840px) {

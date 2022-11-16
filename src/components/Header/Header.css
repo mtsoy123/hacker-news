@@ -7,7 +7,6 @@
 .header__container {
   display: flex;
   align-items: center;
-
   text-decoration: none;
   width: 100%;
   max-width: 840px;
@@ -25,9 +24,7 @@
   font-weight: 900;
   font-size: 20px;
   line-height: 27px;
-
   color: #1f1f1f;
-
   margin-left: 12px;
 }
 

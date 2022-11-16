@@ -1,0 +1,13 @@
+.errorMessage {
+  font-family: 'Avenir', serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1f1f1f;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}

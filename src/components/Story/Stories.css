@@ -1,0 +1,101 @@
+.story {
+  max-width: 840px;
+  width: 100%;
+  background: #fdfdf8;
+  border: 1px solid #c6c6c6;
+  border-radius: 6px;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.story_type_feed:hover {
+  cursor: pointer;
+  background: #f1f1ed;
+  transition: background .3s ease-out;
+}
+
+.story_type_storyPage {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+
+.story_type_storyPage:hover {
+  cursor: auto;
+}
+
+.story__container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.story__header {
+  font-family: 'Avenir', serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: left;
+  color: #1f1f1f;
+  margin: 0;
+}
+
+.story__caption-wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.story__caption-container {
+  display: flex;
+  gap: 4px;
+}
+
+.story__caption {
+  font-family: 'Avenir', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #595959;
+  margin: 0;
+
+}
+
+.story__link {
+  font-family: 'Avenir', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #268bd2;
+  text-align: left;
+}
+
+.story__link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #1d6699;
+  transition: color .3s ease-out;
+
+}
+
+.story__header_type_storyPage {
+  font-family: 'Avenir', serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  color: #1f1f1f;
+}

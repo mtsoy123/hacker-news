@@ -1,0 +1,49 @@
+.comment__container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.comment {
+  font-family: 'Avenir', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #1f1f1f;
+  margin: 0;
+  text-align: left;
+}
+
+.comment__caption {
+  font-family: 'Avenir', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #595959;
+  margin: 0;
+}
+
+.comment__caption-container {
+  display: flex;
+  gap: 16px;
+  margin-left: 24px;
+}
+
+.comment__wrapper {
+  display: flex;
+  gap: 8px
+}
+
+.comment__button {
+  display: flex;
+  align-items: center;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}

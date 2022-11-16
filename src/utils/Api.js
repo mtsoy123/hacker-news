@@ -9,28 +9,55 @@ class Api {
     .then((res) => res.ok ? res.json() : Promise.reject(res.status))
   }
 
-  getNewsId() {
+  getStoryId() {
     return this._checkResponse(`${this._baseUrl}/newstories.json?print=pretty`, {
       method: 'GET',
       headers: this._headers,
     })
   }
 
-  getNews(id) {
+  getItem(id) {
     return this._checkResponse(`${this._baseUrl}/item/${id}.json?print=pretty`)
   }
 
-  getLatestNews(amount) {
-    return this.getNewsId()
+  getLatestStories(amount) {
+    return this.getStoryId()
     .then((res) => {
 
       const ids = res.slice(0, amount)
-      const urls = ids.map((item, index) => {
-        return this.getNews(item)
+      const urls = ids.map((item) => {
+        return this.getItem(item)
       })
-
       return Promise.all(urls)
     })
+  }
+
+  getComments(kidsArray) {
+    /*let commentsUrls = [];
+
+    const fetchComments = (commentsArr) => {
+      commentsUrls.push(commentsArr.map((item) => {
+        const tempItem = this.getItem(item)
+        .then((res) => {
+          if (Object.keys(res).includes('kids')) {
+            fetchComments(res.kids)
+          }
+          return res
+        })
+
+        return tempItem
+      }))
+    }*/
+
+    const commentsUrls = kidsArray.map((item) => {
+      return this.getItem(item).then((res) => {
+        if (Object.keys(res).includes('kids')) {
+          return this.getItem(res.kids)
+        }
+      })
+    })
+
+    return Promise.all(commentsUrls)
   }
 }
 
