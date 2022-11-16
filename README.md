@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Getting started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    yarn run start
 
-## Available Scripts
+Running on `localhost:3000`
 
-In the project directory, you can run:
+## Функционал и технические требования
 
-### `npm start`
+Технические требования соблюдены. Функционал реализован, кроме комментариев к новости.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## UI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+UI стилизован под основную страницу `https://www.ycombinator.com/`
 
-### `npm test`
+# Главная страница
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Показывает последние 100 новостей в виде списка, отсортированного по дате, самые свежие сверху.
 
-### `npm run build`
+Каждая новость содержит: название, рейтинг, ник автора, дату публикации
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+По клику на новость происходит переход на страницу новости
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Список новостей должен автоматически обновляться раз в минуту без участия пользователя
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+На странице должна быть кнопка для принудительного обновления списка новостей
 
-### `npm run eject`
+# Страница новости
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Должна содержать: ссылку на новость, заголовок новости, дату, автора, счётчик количества
+комментариев, список комментариев в виде дерева
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Корневые комментарии подгружаются сразу же при входе на страницу, вложенные - по клику на корневой
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+На странице должна быть кнопка для принудительного обновления списка комментариев
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+На странице должна быть кнопка для возврата к списку новостей
 
-## Learn More
+# Технические требования
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Приложение разработано с использованием React и Redux
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Использован официальный API Hacker News. Вызовы Hacker News API и обработка данных от него
+производятся напрямую с фронтенда (кроме случая, если вы сделаете опциональное задание про Node.JS)
 
-### Code Splitting
+Роутинг выполнен с использованием React Router v5
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Фреймворк UI любой на ваше усмотрение (как пример Ant Design или Semantic UI).
 
-### Analyzing the Bundle Size
+Можно и на чистом css, главное, чтобы было красиво
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Пакетный менеджер yarn
 
-### Making a Progressive Web App
+Приложение должно запускаться по адресу localhost:3000 командой yarn start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+При переходах по ссылкам страница не перезагружается
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Исходный код решения должен быть выложен с вашего аккаунта на Github с Readme файлом с инструкцией
+по запуску
