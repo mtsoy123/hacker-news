@@ -14,8 +14,8 @@ const stringMiddleware = () => (next) => (action) => {
 
 const store = createStore(
   combineReducers({story, comment}),
-  compose(applyMiddleware(ReduxThunk, stringMiddleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+  compose(applyMiddleware(ReduxThunk, stringMiddleware)/*,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()*/)
 );
 
 export default store
